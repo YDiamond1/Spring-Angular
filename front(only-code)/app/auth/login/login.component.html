@@ -1,0 +1,27 @@
+<div class = container>
+  <p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+  <form  class="login-form" #form="ngForm" (ngSubmit)="login()">
+    <h1>Login</h1>
+
+    <div class="txtb">
+      <input type="text" name="login" [ngClass]="{focus: isFocusUsername}" (focus)="editUsername()" (blur)="editUsername()"  [(ngModel)]="user.username" #username="ngModel">
+      <span data-placeholder="Username"></span>
+
+    </div>
+
+    <div class="txtb">
+      <input type="password" name="pass" [ngClass]="{focus : isFocusPassword}" (focus)="editPassword()" (blur)="editPassword()"  [(ngModel)]="user.password" #password="ngModel">
+      <span data-placeholder="Password"></span>
+    </div>
+
+    <input type="submit" [disabled]="username.pristine || password.pristine" class="logbtn" value="Login">
+
+    <div class="bottom-text">
+      Don't have account? <a [routerLink]="['/auth/signup']"> Sign up</a>
+    </div>
+
+
+  </form>
+  <a [routerLink]="['/main']">to Main</a>
+</div>

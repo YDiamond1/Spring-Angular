@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.inputs{
+  display: flex;
+  justify-content: center;
+}
+.input{
+  display: inline-block;
+  margin: 10px;
+  max-height: 100px;
+}
+.input>label{
+  font-size: 1.4em;
+
+}
+#lY{
+
+}
+canvas{
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 10px;
+}
+.graph{
+  display: flex;
+  justify-content: center;
+}
+
+.centered{
+
+}
+
+
+.button-add{
+  display: flex;
+  justify-content: center;
+}
+.block{
+  display: flex;
+  justify-content: center;
+
+}
+.errorInput{
+  border-color: #ff1700;
+}

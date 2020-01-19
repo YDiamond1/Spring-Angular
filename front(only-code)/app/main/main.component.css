@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+.container{
+  height: 100vh;
+  background: linear-gradient(120deg,#3498db,#8e44ad);
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 64px;
+  padding: 16px 30px;
+  font-family: montserrat;
+  position: relative;
+}
+app-graph{
+  margin-top: 20px;
+}
+.info{
+  height: 32px;
+  width: 32px;
+  transition: .3s;
+}
+.info :hover{
+  color:#3498db;
+  transition: 0.3s;
+}
+i{
+  font-size: 32px;
+}
+.header-text{
+  font-size: 20px;
+  text-transform: uppercase ;
+}
+.log-out{
+  padding: 0 8px 0 5px;
+  display: flex;
+
+  border: 2px solid white;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+}
+.log-out:hover{
+  border: #8e44ad solid 2px;
+  color: #8e44ad;
+  transition: .3s;
+}
+.font{
+  font-size: 30px;
+  font-family: Monoton;
+  text-align: center;
+}

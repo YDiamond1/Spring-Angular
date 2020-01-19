@@ -1,0 +1,27 @@
+<div class="container p-grid p-align-center ">
+  <p-toast [style]="{marginTop: '80px'}"></p-toast>
+  <div class="graph  p-col-12 p-lg-6">
+    <canvas class="centered" height="400" width="400"  #graph (click)="clickGraphic($event)"></canvas>
+  </div>
+  <p-card class="inputs  p-col-12 p-lg-5">
+
+    <div class="input">
+      <label class="text">X:</label>
+      <p-listbox [listStyle]="{'max-height':'100px'}" [options]="listOfX" [(ngModel)]="selectedX" [disabled]="!selectedR" (onClick)="setX()" required=""></p-listbox>
+    </div>
+
+    <div class="input">
+      <label class="text">R:</label>
+      <p-listbox [options]="listOfR"  [listStyle]="{'max-height':'100px'}" [(ngModel)]="selectedR" (onChange)="setR()" required></p-listbox>
+    </div>
+    <span class="input block ">
+
+      <input type="text" size="10" id="Y" placeholder="Y" #Y [(ngModel)]="point.y" pInputText min="-3" max="3"  [disabled]="!selectedR"
+             required autocomplete="false"
+      >
+  </span>
+    <div class="button-add p-col">
+      <p-button label="ADD POINT"  (onClick)="addPoint()"></p-button>
+    </div>
+  </p-card>
+</div>

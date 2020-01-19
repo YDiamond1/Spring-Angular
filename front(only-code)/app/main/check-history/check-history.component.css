@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.dataTable{
+  margin: 20px 10px 0px 10px;
+
+}
+td{
+  text-align: center;
+}

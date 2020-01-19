@@ -1,0 +1,27 @@
+<div class="container">
+  <p-toast [style]="{marginTop: '80px'}"></p-toast>
+  <form class="sign-form" #form="ngForm" (ngSubmit)="submit()">
+    <h1>Sign up</h1>
+    <div class="txtb">
+      <input type="text" name="username" [(ngModel)]="user.username" [ngClass]="{focus: isFocusUsername}" (focus)="editUsername()" (blur)="editUsername()" required #username="ngModel">
+      <span class="label" data-placeholder="Username"></span>
+      <div class="error-block" *ngIf="form.submitted">
+        <div *ngIf="username.untouched">enter your username</div>
+      </div>
+    </div>
+    <div class="txtb">
+      <input type="text" name="password" min="6" [(ngModel)]="user.password" [ngClass]="{focus : isFocusPassword}" (focus)="editPassword()" (blur)="editPassword()" required #password="ngModel">
+      <span class="label" data-placeholder="Password"></span>
+      <div class="error-block" *ngIf="form.submitted">
+        <div *ngIf="password.untouched">enter your password</div>
+        <div *ngIf="password.invalid"> password must contain more than 6 characters </div>
+      </div>
+    </div>
+    <div class="submit">
+      <input type="submit" [disabled]="username.pristine || password.pristine" class="logbtn" value="sign up">
+    </div>
+    <div class="back">
+      <button class="cancel logbtn" [routerLink]="['/login']"> back to login</button>
+    </div>
+  </form>
+</div>

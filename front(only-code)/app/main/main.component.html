@@ -1,0 +1,17 @@
+<div class="container">
+  <header class="between">
+    <div class="info" >
+      <i class="pi pi-info-circle "(click)="clickinfo()"></i>
+      <app-info [username]="user" [ngStyle]="{'display': isInfo ? 'block': 'none'}"></app-info>
+    </div>
+    <div class="header-text font">laba 4 (ang+spr)</div>
+    <div class="log-out" [routerLink]="['/auth/login']"(click)="auth.logout()">
+      <i class="pi pi-sign-out"></i>
+      <span class="header-text">log out</span>
+    </div>
+  </header>
+  <main>
+    <app-graph></app-graph>
+    <app-check-history></app-check-history>
+  </main>
+</div>
